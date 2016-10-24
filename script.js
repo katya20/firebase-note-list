@@ -9,14 +9,13 @@ nameInput.keydown(function(e) {
   if (e.which == 13) {
     getNotesForName(nameInput.val());
     console.log(nameInput.val());
-    $("#note-list").append(note);
     // we have a new name! Now what?
   }	
 })
 
 function getNotesForName(name) {  
   onNewListItem(nameInput.val() + "/notes", function(note) {
-    console.log(note)
+    $("#note-list").append(note)
   })
 }
 
