@@ -1,13 +1,12 @@
 console.log("script.js is running");
 
-addListItem("katya" + "/notes", "hello!!!")
-
 var name;
 var nameInput = $("#name-input")
 var noteInput = $("#note-input")
 var noteList = $("#note-list")
 
 nameInput.keydown(function(e) {
+  console.log("nameInput")
   if (e.which == 13) {
     getNotesForName(nameInput.val);
     console.log("nameInput keydown is working");
