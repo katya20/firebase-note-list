@@ -1,4 +1,4 @@
-addListItem(name + "/notes", noteInput.val())
+addListItem("katya" + "/notes", "hello!!!")
 
 var name;
 var nameInput = $("#name-input")
