@@ -6,10 +6,9 @@ var noteInput = $("#note-input")
 var noteList = $("#note-list")
 
 nameInput.keydown(function(e) {
-  console.log(nameInput.val())
   if (e.which == 13) {
-    getNotesForName(nameInput.val);
-    console.log("nameInput keydown is working");
+    getNotesForName(nameInput.val());
+    console.log(nameInput.val());
     // we have a new name! Now what?
   }	
 })
