@@ -1,3 +1,5 @@
+console.log("script.js is running");
+
 addListItem("katya" + "/notes", "hello!!!")
 
 var name;
@@ -8,6 +10,7 @@ var noteList = $("#note-list")
 nameInput.keydown(function(e) {
   if (e.which == 13) {
     getNotesForName(nameInput.val);
+    console.log(
     // we have a new name! Now what?
   }	
 })
