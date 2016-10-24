@@ -14,21 +14,16 @@ nameInput.keydown(function(e) {
 })
 
 function getNotesForName(name) {  
-  onNewListItem(name + "/notes", function(note) {
+  onNewListItem(nameInput.val() + "/notes", function(note) {
     console.log(note)
   })
 }
 
 noteInput.keydown(function(e) {
   if (e.which == 13) {    
-    addListItem(name + "/notes", noteInput.val())
+    addListItem(nameInput.val() + "/notes", noteInput.val())
     console.log("noteInput keydown is working");
   }
 })
 
 
-function onNewListItem(name, callback) {		
-  store.child("vars" + "/" + name).on("child_added", function(data) {
-    callback(data.val())
-  })
-}
