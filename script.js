@@ -25,3 +25,10 @@ noteInput.keydown(function(e) {
     console.log("noteInput keydown is working");
   }
 })
+
+
+function onNewListItem(name, callback) {		
+  store.child("vars" + "/" + name).on("child_added", function(data) {
+    callback(data.val())
+  })
+}
