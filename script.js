@@ -10,7 +10,7 @@ var noteList = $("#note-list")
 nameInput.keydown(function(e) {
   if (e.which == 13) {
     getNotesForName(nameInput.val);
-    console.log(
+    console.log("nameInput keydown is working");
     // we have a new name! Now what?
   }	
 })
@@ -24,5 +24,6 @@ function getNotesForName(name) {
 noteInput.keydown(function(e) {
   if (e.which == 13) {    
     addListItem(name + "/notes", noteInput.val())
+    console.log("noteInput keydown is working");
   }
 })
