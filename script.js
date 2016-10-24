@@ -9,7 +9,7 @@ nameInput.keydown(function(e) {
   if (e.which == 13) {
     getNotesForName(nameInput.val());
     console.log(nameInput.val());
-    // we have a new name! Now what?
+    $("#note-list").html("");
   }	
 })
 
