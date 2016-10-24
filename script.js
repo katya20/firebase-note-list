@@ -23,7 +23,8 @@ noteInput.keydown(function(e) {
   if (e.which == 13) {    
     addListItem(nameInput.val() + "/notes", noteInput.val())
     console.log("noteInput keydown is working");
-    $("#note-list").html(noteInput.val());
+    $("#note-list").append(noteInput.val());
+    $("#note-list").html(note);
   }
 })
 
